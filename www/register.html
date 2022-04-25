@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+    <div id="app">
+        <div class="is-flex is-justify-content-center is-align-items-center" style="height: 100vh;">
+            <div class="card">
+                <div class="card-content">
+                    <h2 class="title is-2 has-text-centered">CREATE ACCOUNT</h2>
+                    <div class="mb-2">
+                        <input v-model="form.id" class="input"  type="text" placeholder="ID">
+     
+                    </div>
+                    <div class="mb-2">
+                        <input v-model="form.idStd" class="input" type="text" placeholder="ID_STUDENT">
+                        
+                    </div>
+                    <div class="mb-2">
+                        <input v-model="form.name" class="input" type="text" placeholder="NAME">
+                        
+                    </div>
+                    <div class="mb-2">
+                        <input v-model="form.branch" class="input" type="text" placeholder="BRANCH">
+                        
+                    </div>
+                        <button @click="onRegister()" class="button is-info is-fullwidth">REGISTER</button>
+                        <a href="./index.html" class="button is-warning is-fullwidth mt-2">LOGIN</a>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="./scr/js/register.js"></script>
+
+</body>
+</html>

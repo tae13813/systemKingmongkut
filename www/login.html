@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN</title>
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     -->
+     <link rel="stylesheet" href="scr/css/backGLogin.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://unpkg.com/vue@3"></script>
+</head>
+<body>
+  <div id="app">
+  <div class="wrapper fadeInDown">
+    <div id="formContent">
+     
+      <h2 class="active"> Sign In </h2>
+    
+      <div class="fadeIn first">
+        <img src="scr/imgs/logo.png" id="icon" alt="User Icon" />
+      </div>
+      <form>
+                    <div >
+                      <input v-model="form.idStd" class="input" type="text" placeholder="ID-STUDENT">
+                    </div>
+                    <div >
+                      <input v-model="form.id" class="input" type="text" placeholder="ID" name="psw" required>     
+                    </div>
+                    <div>
+                        <input @click="onLogin()" class="fadeIn fourth" type="submit" value="Log In">
+                    </div>
+                    <div>
+                        <a href="./adminLog.html" class="fadeIn fourth" >admin </a>
+                      </div>
+      </form>
+                </div>
+            </div>
+        </div>
+   
+ 
+
+    <script src="./scr/js/login.js"></script>
+
+
+</body>
+</html>
