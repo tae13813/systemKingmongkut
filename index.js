@@ -3,6 +3,7 @@ const expressSession = require('express-session');
 const bodyParser = require('body-parser'); 
 const app = express();
 const mongoose = require('mongoose');
+require('dotenv').config()
 
 const cors = require('cors');
 
@@ -22,11 +23,10 @@ app.use(express.static(__dirname + '/www'));
 //   cookie: { }
 // }))
 
-// mongoose.connect('mongodb://localhost:27017/me_tang', { useNewUrlParser: true, useUnifiedTopology: true })
-// .then( () => console.log("database successfully connected") )
-// .catch( (err) => { console.log("Could not connect to database : " + err); /*process.exit(1)*/ } );
-// mongoose.set('debug', true);
-
+mongoose.connect(process.env.DATABASE_URL)
+const db = mongoose.connection
+db.on('error',(error)=> console.error(error))
+db.once('open',()=>console.log('Connected to Database'))
 //! use router 
 app.use('/', require('./src/routes'));
 
