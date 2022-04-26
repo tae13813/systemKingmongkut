@@ -22,10 +22,10 @@ app.use(express.static(__dirname + '/www'));
 //   cookie: { }
 // }))
 
-mongoose.connect('mongodb://localhost:27017/me_tang', { useNewUrlParser: true, useUnifiedTopology: true })
-.then( () => console.log("database successfully connected") )
-.catch( (err) => { console.log("Could not connect to database : " + err); /*process.exit(1)*/ } );
-mongoose.set('debug', true);
+// mongoose.connect('mongodb://localhost:27017/me_tang', { useNewUrlParser: true, useUnifiedTopology: true })
+// .then( () => console.log("database successfully connected") )
+// .catch( (err) => { console.log("Could not connect to database : " + err); /*process.exit(1)*/ } );
+// mongoose.set('debug', true);
 
 //! use router 
 app.use('/', require('./src/routes'));
