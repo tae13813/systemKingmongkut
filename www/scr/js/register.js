@@ -12,7 +12,7 @@ Vue.createApp({
     methods: {
         async onRegister() {
            
-                await axios.post('http://localhost:3000/register', {
+                await axios.post('http://systemk.app.ruk-com.cloud/register', {
                     id: this.form.id,
                     idStd: this.form.idStd,
                     name: this.form.name,

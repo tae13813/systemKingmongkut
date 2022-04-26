@@ -9,7 +9,7 @@ Vue.createApp({
     },
     methods: {
         async onLogin() {
-            await axios.post('http://localhost:3000/adminLog', {
+            await axios.post('http://systemk.app.ruk-com.cloud/adminLog', {
                 id: this.form.id,
                 password: this.form.password
             })

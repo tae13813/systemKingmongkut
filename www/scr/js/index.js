@@ -8,7 +8,7 @@ Vue.createApp({
         
     },
     async mounted() {
-        await axios.get('http://localhost:3000/checkUserLogin')
+        await axios.get('http://systemk.app.ruk-com.cloud/checkUserLogin')
             .then((res) => {
                 console.log(res)
                 if (res.status === 200) {

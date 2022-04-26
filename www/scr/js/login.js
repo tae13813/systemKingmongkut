@@ -9,7 +9,7 @@ Vue.createApp({
     },
     methods: {
         async onLogin() {
-            await axios.post('http://localhost:3000/login', {
+            await axios.post('http://systemk.app.ruk-com.cloud/login', {
                 idStd: this.form.idStd,
                 id: this.form.id
             })
@@ -18,7 +18,7 @@ Vue.createApp({
                         alert(res.data.msg);
                         console.log(res.data)
                         localStorage.setItem("dataUser", JSON.stringify(res.data.data));
-                        window.location.href = '../www/menu.html';
+                        window.location.href = '../menu.html';
                     }
                 })
                 .catch((err) => {
