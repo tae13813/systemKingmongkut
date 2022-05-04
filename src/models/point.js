@@ -2,13 +2,15 @@ const mongoose = require('mongoose');
 
 const collection = 'point';
 
-const courseSchema = mongoose.Schema({
-    idpoint:  { type: String, require: true },
-   point: { type: String, require: true },
+const pointSchema = mongoose.Schema({
+     idStd: { type: String, require: true },
+     idCourse:  { type: String, require: true },
+     point: { type: String, require: true },
+     Date: { type: Date, require: true },
 }, {
     timestamps: true,
     versionKey: false,
     collection
 });
 
-module.exports = mongoose.model(collection, adminSchema);
+module.exports = mongoose.model(collection, pointSchema);

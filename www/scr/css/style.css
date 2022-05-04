@@ -72,7 +72,7 @@ body {
 
 
 .bg-image {
-  background-image: url("images/bg.jpg");
+  background-image: url("imgs/bg.jpg");
   background-color: #ffffff;
   background-position: center;
   background-size: cover;
@@ -167,5 +167,45 @@ li a:hover::after {
   color: white;
 }
 
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #fe914c;
+  width: 50%;
+}
 
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+p{
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
 
+li a {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+  position: relative;
+  font-family: 'Prompt';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+}
+img{
+  width: 50%
+}
+.btn-primary{
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  transition: 0.3s;
+  background-color: #c9c010;
+}
+.col-12{
+  border: medium none;
+  background: #fe914c none ;
+  width: 450px;
+  height: auto;
+  text-align: center;
+}

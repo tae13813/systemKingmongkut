@@ -1,0 +1,103 @@
+@font-face {
+  font-family: Kanit;
+  src: url(fonts/Kanit-Regular.ttf);
+}
+
+body {
+  font-family: Kanit;
+  margin: 0px;
+  font-size: 1.5rem;
+  display: flex;
+}
+
+.bg-image {
+  /*background-image: url("imgs/bg.jpg");*/
+  background-color: #ececec;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+}
+
+.side-menu {
+  width: 20%;
+  height: 95%;
+  padding: 2rem 1rem;
+  position: absolute; /*เพิ่ม*/
+}
+
+.right {
+  float: right;
+}
+
+.orange {
+  background-color: #fe914c;
+}
+
+.menu-list li {
+  margin: 20px 20px;
+}
+
+.menu-item {
+  text-decoration: none;
+  color: inherit;
+}
+
+.menu-item:hover {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.active {
+  width: 70%;
+  border-bottom: 4px solid black;
+  padding-bottom: 20px;
+}
+
+.content {
+  width: 100%;
+  padding: 3rem 25rem;
+  text-align: center;
+  
+}
+
+.title {
+  font-size: 32px;
+}
+
+.title-line {
+  width: 50%;
+  border: 2px solid #000000;
+  margin: 10px auto;
+}
+
+.inline {
+  display: inline-block;
+}
+
+.form-custom {
+  outline: none;
+  border: 6px solid #fe914c;
+  width: 20rem;
+  border-radius: 8px;
+  padding: 2px 10px;
+  line-height: 2;
+  font-size: 20px;
+  margin: 20px auto;
+}
+
+.btn-custom {
+  background-color: #fe914c;
+  padding: 1rem 2rem;
+  font-size: 2rem;
+  font-weight: bold;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  margin: 10px;
+}
+
+.user-icon {
+  width: 60px;
+}
+
+
+

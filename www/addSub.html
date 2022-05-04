@@ -4,21 +4,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>เพิ่มนักศึกษา</title>
+    <title>เพิ่มวิชา</title>
     <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" /> -->
     <link rel="stylesheet" href="scr/css/styles.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="https://unpkg.com/vue@3"></script>
 </head>
-<body class="bg-image">
+<body>
     <div id="app">
         <div class="side-menu orange">
             <ul class="menu-list">
-              <li class="active">
+              <li class="">
                 <a href="register.html" class="menu-item">เพิ่ม นักศึกษา</a>
               </li>
-              <li class="">
+              <li class="active">
                 <a href="addSub.html" class="menu-item">เพิ่มวิชา</a>
               </li>
               <li class="">
@@ -33,35 +33,19 @@
             </ul>
           </div>
                 <div class="content">
-                    <h2 >เพิ่ม นักศึกษา</h2>
+                    <h2 >เพิ่มวิชา</h2>
                     <div class="title-line"></div>
                     <div>
-                      
-                        <input v-model="form.id" class="form-custom"  type="text" placeholder="ID">
-                      </div>
-                    
-                    <div>
-                        <input v-model="form.idStd" class="form-custom" type="text" placeholder="ID_STUDENT">
-                      </div>
-                    
-                    <div>
-                        <input v-model="form.name" class="form-custom" type="text" placeholder="NAME">
-                      </div>
-                  
-                    <div>
-                        <input v-model="form.branch" class="form-custom" type="text" placeholder="BRANCH">
-                      </div>
-                    <div>
-                        <button @click="onRegister()" class="btn-custom">REGISTER</button>
-                  </div>
-   
-                </div>
-            
-        
+                        <input v-model="form.idCourse" type="text"  class="form-custom" placeholder="ชื่อวิชา"><br>
+                    </div>
+                    <div >
+                        <input v-model="form.course" type="text"  class="form-custom" placeholder="รหัสวิชา"><br>
+                    </div>
+                    <button @click="onAddSub()" class="btn-custom">add</button>
     </div>
 
-
-    <script src="./scr/js/register.js"></script>
+    </div>
+    <script src="./scr/js/addSub.js"></script>
 
 </body>
 </html>

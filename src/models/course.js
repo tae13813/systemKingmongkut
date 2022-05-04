@@ -11,4 +11,4 @@ const courseSchema = mongoose.Schema({
     collection
 });
 
-module.exports = mongoose.model(collection, adminSchema);
+module.exports = mongoose.model(collection, courseSchema);

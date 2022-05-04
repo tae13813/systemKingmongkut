@@ -6,8 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ข้อมูลนักศึกษา</title>
   <link rel="stylesheet" href="scr/css/style.css">
-<body>
-  
+  <link rel="stylesheet" href="scr/css/font-style.css">
+  <link rel="stylesheet" href="scr/css/font-size.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/vue@3"></script>
+<body class="bg-image">
+  <div id="app">
   <div class="header">
 
     <div class="logo">
@@ -17,17 +21,48 @@
     <div class="banner">
       <div class="banner-orange">
         <center><ul> <!--แถบเมนู//เพิ่งเพิ่ม-->
-          <li><a href="Info.html">ข้อมูลนักศึกษา</a></li>
-          <li><a href="add_subject.html">เพิ่มวิชาเรียน</a></li>
-          <li><a href="withdraw.html">ถอนวิชาเรียน</a></li>
+
+          <li><a href="Info.html">ข้อมูลนักศึกษา </a></li>
           <li><a href="results.html">ผลการเรียน</a></li>
           <li><a href="attendance.html">จำนวนการเข้าเรียน</a></li>
+          <li><a href="logout.html">ออกจากระบบ</a></li>
+          <form>
+          
+        </form>
           </ul></center>
       </div>
       <div class="banner-black"></div>
     </div>
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-7 card py-2">
+        <div class="row justify-content-center">
+          <div class="col-6">
+            <img src="scr/imgs/user/user.png" alt="" >
+        </div>  
+        
+        <div class="col-6 ">
+          <p class="text-dark px-3 fs-16">รหัสนักศึกษา : {{ data.id }}</p>
+          <p class="text-dark px-3 fs-16" >ชื่อ นามสกุล : {{ data.name }}</p>
+          <p class="text-dark px-3 fs-16">สาขา : {{ data.branch }}</p>
+        </div>
+      </div>
+    </div>
+    <ul >
+    
+    </ul>
+    <!-- <div  >
+      <h1 class="text-dark">{{ data.id }} {{ data.idStd }} {{ data.name }} {{data.branch}}</h1>
+    </div> -->
+
+
 
   </div>
+</div>
+  
+<script src="./scr/js/info.js"></script>
 
+ 
 </body>
 </html>
+
+

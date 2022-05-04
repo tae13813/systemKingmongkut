@@ -12,7 +12,7 @@ Vue.createApp({
     methods: {
         async onRegister() {
            
-                await axios.post('http://systemk.app.ruk-com.cloud/register', {
+                await axios.post('http://localhost:3000/register', {
                     id: this.form.id,
                     idStd: this.form.idStd,
                     name: this.form.name,
@@ -21,7 +21,7 @@ Vue.createApp({
                     .then((res) => {
                         if (res.status === 200) {
                             alert(res.data.msg);
-                            window.location.href = './../../login.html';
+                            // window.location.href = './../../login.html';
                         }
                     })
                     .catch((err) => {

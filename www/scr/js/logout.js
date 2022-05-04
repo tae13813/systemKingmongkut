@@ -1,24 +1,22 @@
 Vue.createApp({
+    created(){
+        this.logout();
+    },
     data() {
         return {
-            form: {
-                id: "",
-                password: ""
-            }
+          data:[],
         }
+      
     },
     methods: {
-        async onLogin() {
-            await axios.post('http://localhost:3000/adminLog', {
-                id: this.form.id,
-                password: this.form.password
+        async logout() {
+            await axios.get('http://localhost:3000/logout', {
             })
                 .then((res) => {
                     if (res.status === 200) {
                         alert(res.data.msg);
-                        console.log(res.data)
-                        localStorage.setItem("dataUser", JSON.stringify(res.data.data));
-                        window.location.href =  '../www/register.html';
+                        window.location.href = '../www/index.html'
+                        localStorage.removeItem('dataUser');
                     }
                 })
                 .catch((err) => {

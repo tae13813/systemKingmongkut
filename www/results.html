@@ -6,9 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ผลการเรียน</title>
   <link rel="stylesheet" href="scr/css/style.css">
-</head>
+  <link rel="stylesheet" href="scr/css/font-style.css">
+  <link rel="stylesheet" href="scr/css/font-size.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.26.1/axios.min.js" integrity="sha512-bPh3uwgU5qEMipS/VOmRqynnMXGGSRv+72H/N260MQeXZIK4PG48401Bsby9Nq5P5fz7hy5UGNmC/W1Z51h2GQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://unpkg.com/vue@3"></script>
 <body>
-  
+  <div id="app">
   <div class="header">
 
     <div class="logo">
@@ -18,111 +21,38 @@
     <div class="banner">
       <div class="banner-orange">
         <center><ul> <!--แถบเมนู//เพิ่งเพิ่ม-->
-          <li><a href="Info.html">ข้อมูลนักศึกษา</a></li>
-          <li><a href="add_subject.html">เพิ่มวิชาเรียน</a></li>
-          <li><a href="withdraw.html">ถอนวิชาเรียน</a></li>
+
+          <li><a href="Info.html">ข้อมูลนักศึกษา </a></li>
           <li><a href="results.html">ผลการเรียน</a></li>
           <li><a href="attendance.html">จำนวนการเข้าเรียน</a></li>
+          <li><a href="logout.html">ออกจากระบบ</a></li>
+          <form>
+          
+        </form>
           </ul></center>
       </div>
       <div class="banner-black"></div>
     </div>
-
+    <div class="row justify-content-center" v-for="item in data">
+      {{data.length}}
+    <div class="col-12" >
+      <!-- <p class="text-dark px-3 fs-16">วันที่ : {{item.Date }}</p> -->
+      <p class="text-dark px-3 fs-16">รหัสนักศึกษา : {{ item.idStd }}</p>
+      <p class="text-dark px-3 fs-16" >รหัสวิชา : {{ item.idCourse }}</p>
+      <p class="text-dark px-3 fs-16">คะแนน : {{ item.point }}</p>
+         </div>
+    </div>
   </div>
+</div>
+  
+<script src="./scr/js/result.js">
+  
+</script>
 
-  <div class="content-center">
 
-    <h2>ผลการเรียน</h2>
 
-    <table class="table">
-      <tr>
-        <th class="border">ลำดับที่</th>
-        <th class="border">รหัสวิชา</th>
-        <th class="border">หน่วยกิต</th>
-        <th class="border">รายวิชา</th>
-        <th class="border">หน่วยกิต</th>
-        <th class="border">วัน-เวลาเรียน</th>
-        <th class="border">เกรด</th>
-
-       
-      </tr>
-
-      <tr>
-        <td class="border">1</td>
-        <td class="border">060243110</td>
-        <td class="border">3</td>
-        <td class="border">Javascrit Programming</td>
-        <td class="border">3</td>
-        <td class="border">W 13:00-15:00</td>
-        <td class="border"></td>
-       <!--<td><button class="button">คำนวณเกรด</button></td>-->
-        <td></td>
-        
-      </tr>
-
-      <tr>
-        <td class="border">2</td>
-        <td class="border">060243111</td>
-        <td class="border">1</td>
-        <td class="border">Software Engineering</td>
-        <td class="border">3</td>
-        <td class="border">W 17:00-20:00</td>
-        <td class="border"></td>
-        <!--<td><button class="button">คำนวณเกรด</button></td>-->
-        <td></td>
-      </tr>
-
-      <tr>
-        <td class="border">3</td>
-        <td class="border">060243112 </td>
-        <td class="border">1</td>
-        <td class="border">System Analysis and Design</td>
-        <td class="border">3</td>
-        <td class="border">H 9:00-12:00</td>
-        <td class="border"></td>
-       <!--<td><button class="button">คำนวณเกรด</button></td>-->
-        <td></td>
-      </tr>
-
-      <tr>
-        <td class="border">4</td>
-        <td class="border">060243113</td>
-        <td class="border">3</td>
-        <td class="border">Web programming </td>
-        <td class="border">3</td>
-        <td class="border">F 8:00-10:00</td>
-        <td class="border"></td>
-        <!--<td><button class="button">คำนวณเกรด</button></td>-->
-        <td></td>
-      </tr>
-
-      <tr>
-        <td class="border">5</td>
-        <td class="border">061100001</td>
-        <td class="border">3</td>
-        <td class="border">Design Thinking</td>
-        <td class="border">3</td>
-        <td class="border">T 9:00-12:00</td>
-        <td class="border"></td>
-        <!--<td><button class="button">คำนวณเกรด</button></td>-->
-        <td></td>
-      </tr>
-
-      <tr>
-        <td class="border">6</td>
-        <td class="border">080103034</td>
-        <td class="border">5</td>
-        <td class="border">English conversation</td>
-        <td class="border">3</td>
-        <td class="border">T 13:00-16:00</td>
-        <td class="border"></td>
-        <!--<td><button class="button">คำนวณเกรด</button></td>-->
-        <td></td>
-      </tr>
-    </table>
-    <!--เพิ่ง-เพิ่ม-->
-    <br/><td><button onclick="window.open('score.html')" class="item_button">คะแนน</button>
-  </div>
-
+ 
 </body>
 </html>
+
+
